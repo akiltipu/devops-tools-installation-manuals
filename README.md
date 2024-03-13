@@ -199,6 +199,7 @@ Now, Nexus should be up and running on your Ubuntu system. You can access the Ne
     docker network create sonar-network
 ```
 **Run PostgreSQL Database Container:**
+
 ```bash
     docker run -d --name sonar-db --network sonar-network \
     -e POSTGRES_USER=sonar \
@@ -206,6 +207,7 @@ Now, Nexus should be up and running on your Ubuntu system. You can access the Ne
     -e POSTGRES_DB=sonar \
     postgres:9.6
 ```
+
  -   `-d`: Detached mode, run container in the background.
  -   `--name sonar-db`: Assign a name to the container.
  -   `--network sonar-network`: Connect container to the created network.
@@ -222,16 +224,19 @@ Now, Nexus should be up and running on your Ubuntu system. You can access the Ne
     -e SONAR_JDBC_PASSWORD=sonar \
     sonarqube
 ```
-    
-   -   `-d`: Detached mode, run container in the background.
-    -   `--name sonar`: Assign a name to the SonarQube container.
-    -   `-p 9000:9000`: Map container's port 9000 to host's port 9000.
-    -   `--network sonar-network`: Connect container to the created network.
-    -   `-e SONARQUBE_JDBC_URL=jdbc:postgresql://sonar-db:5432/sonar`: Set JDBC URL to connect SonarQube to the PostgreSQL database.
-    -   `-e SONAR_JDBC_USERNAME=sonar`: Set SonarQube's database username.
-    -   `-e SONAR_JDBC_PASSWORD=sonar`: Set SonarQube's database password.
-    
+
+
+  -   `-d`: Detached mode, run container in the background.
+  -   `--name sonar`: Assign a name to the SonarQube container.
+  -    `-p 9000:9000`: Map container's port 9000 to host's port 9000.
+  -    `--network sonar-network`: Connect container to the created network.
+  -   `-e SONARQUBE_JDBC_URL=jdbc:postgresql://sonar-db:5432/sonar`: Set JDBC URL to connect SonarQube to the PostgreSQL database.
+  -   `-e SONAR_JDBC_USERNAME=sonar`: Set SonarQube's database username.
+  -   `-e SONAR_JDBC_PASSWORD=sonar`: Set SonarQube's database password.
+
+  
  **Access SonarQube:**
+ 
  After running the container, you can access SonarQube by navigating to `http://localhost:9000` in your web browser. The default credentials are:
  - Username: admin
  - Password: admin
