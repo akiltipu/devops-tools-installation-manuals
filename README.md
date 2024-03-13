@@ -1,9 +1,44 @@
-# Devops Tools Installation Manuals
+# DevOps Tools Installation Manuals
 My installation guides and bash scripts for essential DevOps tools like Jenkins (CI/CD), Nexus (artifact repository), SonarQube (code analysis), Docker (containerization), Trivy (vulnerability scanning), etc... on Ubuntu Based Server like EC2, Droplet, Linode.
 
+## Single Command Installation Guide:
 
+To install tools on your Ubuntu server, navigate to your server environment. Copy and paste the following command into your terminal. 
+These commands will _automatically_ download the installation script, grant it execution permissions, and initiate the installation process.
 
-**Expand Dropdown for Details Installation Guideline:**
+**For Jenkins:**
+
+```bash
+wget https://raw.githubusercontent.com/akiltipu/devops-tools-installation-manuals/main/install_jenkins_on_ubuntu.sh
+chmod +x install_jenkins_on_ubuntu.sh
+./install_jenkins_on_ubuntu.sh
+```
+**For Nexus:**
+
+```bash
+wget https://raw.githubusercontent.com/akiltipu/devops-tools-installation-manuals/main/install_nexus_on_ubuntu.sh
+chmod +x install_nexus_on_ubuntu.sh
+./install_nexus_on_ubuntu.sh
+```
+**For SonarQube:**
+
+```bash
+wget https://raw.githubusercontent.com/akiltipu/devops-tools-installation-manuals/main/install_SonarQube_on_ubuntu.sh
+chmod +x install_SonarQube_on_ubuntu.sh
+./install_SonarQube_on_ubuntu.sh
+```
+
+**For Docker and Docker Compose:**
+
+```bash
+wget https://raw.githubusercontent.com/akiltipu/devops-tools-installation-manuals/main/install_docker_dockercompose.sh
+chmod +x install_docker_dockercompose.sh
+./install_docker_dockercompose.sh
+```
+
+---
+
+## To access a comprehensive installation guide with detailed instructions, please expand the dropdown below
 
 <details>
 <summary>Install Jenkins on Ubuntu Server</summary>
