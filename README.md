@@ -36,6 +36,14 @@ chmod +x install_docker_dockercompose.sh
 ./install_docker_dockercompose.sh
 ```
 
+**For Terraform:**
+
+```bash
+wget https://raw.githubusercontent.com/akiltipu/devops-tools-installation-manuals/main/install_terraform_ubuntu.sh
+chmod +x install_terraform_ubuntu.sh
+./install_terraform_ubuntu.sh
+```
+
 ---
 
 ## To access a comprehensive installation guide with detailed instructions, please expand the dropdown below
