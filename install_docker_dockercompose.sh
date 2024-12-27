@@ -37,8 +37,11 @@ source /etc/profile
 # Print a message indicating that Docker installation completed
 echo "Docker installation completed."
 
+# Fetch the latest stable Docker Compose release version from GitHub API
+COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -Po '"tag_name": "\K.*\d')
+
 # Installing Docker Compose
-sudo curl -SL https://github.com/docker/compose/releases/download/1.29.2/docker-compose-`uname -s`-`uname -m` -o /usr/bin/docker-compose
+sudo curl -SL "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
 
 # Give execute permissions to Docker Compose
 sudo chmod +x /usr/bin/docker-compose
